@@ -1,9 +1,11 @@
 <?php require 'inc/head.php'; 
 
-if(!empty($_GET['add_to_cart']) && !empty($_GET['add_name']))
+if(!empty($_GET['add_to_cart']) && !empty($_GET['add_name'])){
   $basket = $_GET['add_to_cart'];
   $name =  $_GET['add_name'];
   $_SESSION['products'][$name] = $basket;
+}
+
 ?>
 <section class="cookies container-fluid">
   <div class="row">
