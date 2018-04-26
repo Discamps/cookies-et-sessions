@@ -1,4 +1,9 @@
-<?php require 'inc/head.php'; ?>
+<?php require 'inc/head.php'; 
+if (empty($_SESSION)) {
+      header('location: index.php');  
+  # code...
+}
+?>
 <section class="cookies container-fluid">
 
 <div class="row">

@@ -56,12 +56,16 @@ if (isset($_GET['logout']) && $_GET['logout']== 'deco') {
           <li><a href="#">Chocolates chips</a></li>
           <li><a href="#">Nuts</a></li>
           <li><a href="#">Gluten full</a></li>
-          <li>
-            <a href="/cart.php" class="btn btn-warning navbar-btn">
-              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-              Cart
-            </a>
-          </li>
+           <?php 
+              if(!empty($_SESSION)) {
+                echo '<li>
+                        <a href="/cart.php" class="btn btn-warning navbar-btn">
+                          <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                          Cart
+                        </a>
+                      </li>';
+                    }
+                    ?>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
