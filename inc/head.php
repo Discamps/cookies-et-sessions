@@ -1,4 +1,5 @@
-<?php  session_start(); 
+<?php  session_start();
+
 
 if (isset($_GET['logout']) && $_GET['logout']== 'deco') {
   unset($_SESSION['login']);
@@ -45,7 +46,7 @@ if (isset($_GET['logout']) && $_GET['logout']== 'deco') {
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <?php 
-              if(empty($_SESSION)) {
+              if(empty($_SESSION['login'])) {
                 echo '<li class="btn btn-info navbar-btn"><a href="login.php">login</a></li>';
               } else{
                 echo '<li class="btn btn-warning navbar-btn"><a href="inc/deconnexion.php">deconnexion</a></li>';
@@ -57,7 +58,7 @@ if (isset($_GET['logout']) && $_GET['logout']== 'deco') {
           <li><a href="#">Nuts</a></li>
           <li><a href="#">Gluten full</a></li>
            <?php 
-              if(!empty($_SESSION)) {
+              if(!empty($_SESSION['login'])) {
                 echo '<li>
                         <a href="/cart.php" class="btn btn-warning navbar-btn">
                           <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>

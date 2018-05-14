@@ -1,12 +1,4 @@
-<?php 
-require 'inc/head.php'; 
-
-if (!empty($_SESSION['login'])) {
-      header('location: index.php');  
-  # code...
-}
-
-
+<?php require 'inc/head.php';
 if (isset($_POST['login'])){
   
   $_SESSION['login'] = $_POST['login'];

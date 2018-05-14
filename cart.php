@@ -1,7 +1,7 @@
-<?php require 'inc/head.php'; 
-if (empty($_SESSION)) {
-      header('location: index.php');  
-  # code...
+<?php require 'inc/head.php';
+if (empty($_SESSION['login'])) {
+    header('location: index.php');
+    exit;
 }
 ?>
 <section class="cookies container-fluid">
