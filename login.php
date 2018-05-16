@@ -1,4 +1,8 @@
 <?php require 'inc/head.php';
+if (isset($_SESSION['login'])) {
+    header('location: index.php');
+    exit;
+}
 if (isset($_POST['login'])){
   
   $_SESSION['login'] = $_POST['login'];
